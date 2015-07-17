@@ -5,6 +5,8 @@
 ##  It can be retrieved from Cache when required 
 
 makeCacheMatrix <- function(x = matrix()) {
+  ## This function creates a matrix and save it
+  ## in Cache for future retrieval
   mCache <- NULL
   set <- function(y) {
     x <<- y
@@ -26,7 +28,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ##  It assumes the matrix passed is always an reversible matrix.
 
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
+  ## This function returns a matrix that is 
+  ## the inverse of 'x'
  
   mInverse <- x$getminverse()
   if(!is.null(mInverse)) {
